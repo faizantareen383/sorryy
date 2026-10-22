@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8f4">
+  <title>A Little Sorry for My Bestie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sparkle-field" aria-hidden="true"></div>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Start over">♡ bestie, please ♡</a>
+      <button class="music-toggle" id="music-toggle" type="button" aria-label="Turn background music on" aria-pressed="false">♫ Music</button>
+      <div class="page-count"><span id="page-number">01</span><span class="count-divider">/</span>05</div>
+    </header>
+
+    <audio id="background-music" src="ww.mp3" loop preload="auto" autoplay></audio>
+
+    <div class="progress-track" aria-label="Apology pages">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+
+    <section class="page active" data-page="0" aria-labelledby="title-1">
+      <div class="page-copy">
+        <span class="eyebrow">a tiny note for my favourite human</span>
+        <h1 id="title-1">Hey, bestie...<br><span>still mad at me?</span></h1>
+        <p>I made you a little something, because you deserve more than a boring “sorry” text. ♡</p>
+        <button class="button primary" data-next>Open your little surprise <span>→</span></button>
+      </div>
+      <div class="art art-bear" aria-label="A cute animated bear holding a heart">
+        <img class="optional-gif" src="1.gif" alt="Optional bestie GIF, replace 1.gif with your own">
+        <div class="orbit orbit-one">♡</div><div class="orbit orbit-two">✦</div>
+        <div class="bear">
+          <span class="ear left"></span><span class="ear right"></span>
+          <span class="face"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="blush blush-left"></i><i class="blush blush-right"></i><i class="nose"></i></span>
+          <span class="bear-heart">♥</span>
+        </div>
+        <span class="art-caption">for my forever friend</span>
+      </div>
+      <div class="page-decoration deco-one">✿</div>
+    </section>
+
+    <section class="page" data-page="1" aria-labelledby="title-2" hidden>
+      <div class="page-copy">
+        <span class="eyebrow">no excuses, just me being honest</span>
+        <h2 id="title-2">I’m really<br><span>sorry, yaar.</span></h2>
+        <p>I know I hurt you, and I hate that I made someone so special to me feel this way. You didn’t deserve that. I should’ve listened and thought about your feelings.</p>
+        <button class="button primary" data-next>Tell me more <span>→</span></button>
+      </div>
+      <div class="art note-art">
+        <img class="optional-gif" src="2.gif" alt="Optional sorry GIF, replace 2.gif with your own">
+        <div class="letter"><span class="letter-heart">♡</span><div class="letter-lines"></div><div class="letter-lines short"></div><div class="letter-lines"></div><div class="letter-sign">— me, with love</div></div>
+        <span class="floating-heart heart-a">♥</span><span class="floating-heart heart-b">♡</span><span class="floating-heart heart-c">♥</span>
+        <span class="art-caption">a little letter from my heart</span>
+      </div>
+    </section>
+
+    <section class="page" data-page="2" aria-labelledby="title-3" hidden>
+      <div class="page-copy">
+        <span class="eyebrow">the best part of my days</span>
+        <h2 id="title-3">Life’s better<br><span>with you in it.</span></h2>
+        <p>Our silly jokes, our random talks, and all the little moments — I treasure every one. I miss my favourite person already.</p>
+        <button class="button primary" data-next>One little promise <span>→</span></button>
+      </div>
+      <div class="art memory-art">
+        <img class="optional-gif" src="3.gif" alt="Optional friendship GIF, replace 3.gif with your own">
+        <div class="photo-card card-back"><span>✿</span></div>
+        <div class="photo-card card-front"><span class="sun">☀</span><span class="memory-friends">૮ ˶ᵔ ᵕ ᵔ˶ ა</span><span class="photo-label">besties forever</span></div>
+        <span class="memory-star star-one">✦</span><span class="memory-star star-two">✧</span>
+        <span class="art-caption">my favourite memories have you in them</span>
+      </div>
+    </section>
+
+    <section class="page" data-page="3" aria-labelledby="title-4" hidden>
+      <div class="page-copy">
+        <span class="eyebrow">a promise from your bestie</span>
+        <h2 id="title-4">I’ll do<br><span>better. Pinky swear.</span></h2>
+        <p>I’ll listen properly, be more thoughtful, and make sure my actions show how much our friendship means to me.</p>
+        <div class="game-card" id="memory-game">
+          <div class="game-heading"><span>♡ bestie memory match</span><span class="game-score"><span id="match-score">0</span>/3 pairs</span></div>
+          <p class="game-instruction" id="game-instruction" aria-live="polite">Find all 3 matching pairs to win a hug!</p>
+          <div class="memory-board" id="memory-board" role="group" aria-label="Memory matching cards"></div>
+          <button class="game-start" id="game-start">Start the game ♡</button>
+          <button class="game-reset" id="game-reset" hidden>Play again ↻</button>
+        </div>
+        <button class="button primary" data-next>Last little thing <span>→</span></button>
+      </div>
+      <div class="art promise-art">
+        <img class="optional-gif" src="4.gif" alt="Optional pinky-promise GIF, replace 4.gif with your own">
+        <div class="pinky">🤙🏻</div><div class="promise-seal">pinky<br>promise<br><span>♡</span></div>
+        <span class="promise-sparkle sparkle-one">✦</span><span class="promise-sparkle sparkle-two">✧</span><span class="art-caption">a promise I plan to keep</span>
+      </div>
+    </section>
+
+    <section class="page final-page" data-page="4" aria-labelledby="title-5" hidden>
+      <div class="page-copy">
+        <span class="eyebrow">one very important question...</span>
+        <h2 id="title-5">Can you forgive<br><span>your silly bestie?</span></h2>
+        <p>No pressure, okay? I just want you to know I love you lots and I’m always here when you’re ready. ♡</p>
+        <div class="last-message">
+          <span class="message-label">♡ Nimo ke liye, dil se ♡</span>
+          <p>Meri pyaari Nimo 🥹💗🎀</p>
+          <p>Yaar tum mere liye bohat important ho please jo bhi hua usay bhool jao na I'm really really sorry meri pyaari bestie 🥺🫂 Mujhse galti hui hai aur main dil se chahta hoon ke tum mujhe maaf kar do I promise next time main aisi galti nahi karunga 💗</p>
+          <p>Nimra sach bataun 🥹 Jab se tum meri zindagi mein aayi ho na mujhe bohat special feel hua hai pehli baar aisa laga ke koi hai jo meri itni care karta hai meri baaton ko importance deta hai aur mujhe samajhne ki koshish karta hai 🫶🏻🎀 Tumhari dosti mere liye bohat precious hai pata hi nahi chala kab main tumse itna attach ho gaya 🥺💗</p>
+          <p>Main apni bestie Nimo ko khona bilkul nahi chahta yaar tum meri life ka bohat pyara hissa ban chuki ho aur main nahi chahta ke meri kisi galti ki wajah se hamari dosti khatam ho jaye 😭🫂</p>
+          <p>Please mujhe maaf kar do na meri pyaari si Nimo 🥹💗 Main sirf sorry bolna nahi chahta balkay apne actions se bhi prove karna chahta hoon ke tumhari dosti mere liye kitni important hai 🫶🏻</p>
+          <p>Please apne bestu ko chor kar mat jaana 🥺🎀💗 I really don't want to lose my favourite person tumhari smile tumhari baatein aur hamari silly si friendship mere liye bohat special hai I'm really sorry Nimo ek chance de do apne bestu ko 🫶🏻🧸💗</p>
+          <span class="message-sign">— tumhara bestu ♡</span>
+        </div>
+        <div class="answer-buttons">
+          <button class="button primary" id="yes-button">Okay, I forgive you! ♡</button>
+          <button class="button shy-button" id="later-button">I need a little time</button>
+        </div>
+        <p class="response" id="response" aria-live="polite"></p>
+      </div>
+      <div class="art final-art">
+        <img class="optional-gif" src="5.gif" alt="Optional forgiveness GIF, replace 5.gif with your own">
+        <div class="gift-box"><div class="gift-lid"></div><div class="gift-ribbon"></div><div class="gift-bow">♡</div></div>
+        <span class="gift-sparkle gift-one">✦</span><span class="gift-sparkle gift-two">✧</span><span class="art-caption">a big hug, whenever you want one</span>
+      </div>
+    </section>
+
+    <footer class="navigation">
+      <button class="back-button" id="back-button" aria-label="Previous page" disabled>← <span>Back</span></button>
+      <div class="dots" aria-label="Page indicators">
+        <button class="dot active" data-go="0" aria-label="Page 1"></button><button class="dot" data-go="1" aria-label="Page 2"></button><button class="dot" data-go="2" aria-label="Page 3"></button><button class="dot" data-go="3" aria-label="Page 4"></button><button class="dot" data-go="4" aria-label="Page 5"></button>
+      </div>
+      <span class="footer-note">made with love, just for you ♡</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
